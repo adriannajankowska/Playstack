@@ -1,0 +1,149 @@
+{
+  "Characters":[
+    {
+      "name": "John",
+      "surname": "Doe",
+      "sex": "Male",
+      "image": "Assets/Resources/CharacterImages/JohnDoe.png",
+      "itemsOwned": [
+        {
+          "itemName": "apple",
+          "price": "100"
+        },
+        {
+          "itemName": "knife",
+          "price": "50"
+        }
+      ]
+    },
+    {
+      "name": "Jane",
+      "surname": "Smith",
+      "sex": "Female",
+      "image": "Assets/Resources/CharacterImages/JaneSmith.png",
+      "itemsOwned": [
+        {
+          "itemName": "book",
+          "price": "75"
+        }
+      ]
+    },
+    {
+      "name": "Alice",
+      "surname": "Johnson",
+      "sex": "Female",
+      "image": "Assets/Resources/CharacterImages/AliceJohnson.png",
+      "itemsOwned": [
+        {
+          "itemName": "laptop",
+          "price": "500"
+        }
+      ]
+    },
+    {
+      "name": "Bob",
+      "surname": "Brown",
+      "sex": "Male",
+      "image": "Assets/Resources/CharacterImages/BobBrown.png",
+      "itemsOwned": [
+        {
+          "itemName": "bicycle",
+          "price": "300"
+        },
+        {
+          "itemName": "helmet",
+          "price": "50"
+        },
+        {
+          "itemName": "gloves",
+          "price": "20"
+        }
+      ]
+    },
+    {
+      "name": "Charlie",
+      "surname": "Davis",
+      "sex": "Male",
+      "image": "Assets/Resources/CharacterImages/CharlieDavis.png",
+      "itemsOwned": [
+        {
+          "itemName": "guitar",
+          "price": "200"
+        }
+      ]
+    },
+    {
+      "name": "Diana",
+      "surname": "Evans",
+      "sex": "Female",
+      "image": "Assets/Resources/CharacterImages/DianaEvans.png",
+      "itemsOwned": [
+        {
+          "itemName": "camera",
+          "price": "350"
+        },
+        {
+          "itemName": "tripod",
+          "price": "45"
+        }
+      ]
+    },
+    {
+      "name": "Eve",
+      "surname": "Garcia",
+      "sex": "Female",
+      "image": "Assets/Resources/CharacterImages/EveGarcia.png",
+      "itemsOwned": [
+        {
+          "itemName": "painting",
+          "price": "200"
+        },
+        {
+          "itemName": "brush",
+          "price": "15"
+        }
+      ]
+    },
+    {
+      "name": "Frank",
+      "surname": "Harris",
+      "sex": "Male",
+      "image": "Assets/Resources/CharacterImages/FrankHarris.png",
+      "itemsOwned": [
+        {
+          "itemName": "phone",
+          "price": "1"
+        }
+      ]
+    },
+    {
+      "name": "Grace",
+      "surname": "Johnson",
+      "sex": "Female",
+      "image": "Assets/Resources/CharacterImages/GraceJohnson.png",
+      "itemsOwned": [
+        {
+          "itemName": "dress",
+          "price": "150"
+        }
+      ]
+    },
+    {
+      "name": "Henry",
+      "surname": "Lee",
+      "sex": "Male",
+      "image": "Assets/Resources/CharacterImages/HenryLee.png",
+      "itemsOwned": [
+        {
+          "itemName": "watch",
+          "price": "200"
+        },
+        {
+          "itemName": "wallet",
+          "price": "60"
+        }
+      ]
+    }
+  ]
+  }
+  

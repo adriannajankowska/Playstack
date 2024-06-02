@@ -1,0 +1,148 @@
+{
+"characters":[
+  {
+    "name": "John",
+    "surname": "Doe",
+    "sex": "Male",
+    "image": "path_on_assets_folder_1",
+    "itemsOwned": [
+      {
+        "itemName": "apple",
+        "price": "100"
+      },
+      {
+        "itemName": "knife",
+        "price": "50"
+      }
+    ]
+  },
+  {
+    "name": "Jane",
+    "surname": "Smith",
+    "sex": "Female",
+    "image": "path_on_assets_folder_2",
+    "itemsOwned": [
+      {
+        "itemName": "book",
+        "price": "75"
+      }
+    ]
+  },
+  {
+    "name": "Alice",
+    "surname": "Johnson",
+    "sex": "Female",
+    "image": "path_on_assets_folder_3",
+    "itemsOwned": [
+      {
+        "itemName": "laptop",
+        "price": "500"
+      }
+    ]
+  },
+  {
+    "name": "Bob",
+    "surname": "Brown",
+    "sex": "Male",
+    "image": "path_on_assets_folder_4",
+    "itemsOwned": [
+      {
+        "itemName": "bicycle",
+        "price": "300"
+      },
+      {
+        "itemName": "helmet",
+        "price": "50"
+      },
+      {
+        "itemName": "gloves",
+        "price": "20"
+      }
+    ]
+  },
+  {
+    "name": "Charlie",
+    "surname": "Davis",
+    "sex": "Male",
+    "image": "path_on_assets_folder_5",
+    "itemsOwned": [
+      {
+        "itemName": "guitar",
+        "price": "200"
+      }
+    ]
+  },
+  {
+    "name": "Diana",
+    "surname": "Evans",
+    "sex": "Female",
+    "image": "path_on_assets_folder_6",
+    "itemsOwned": [
+      {
+        "itemName": "camera",
+        "price": "350"
+      },
+      {
+        "itemName": "tripod",
+        "price": "45"
+      }
+    ]
+  },
+  {
+    "name": "Eve",
+    "surname": "Garcia",
+    "sex": "Female",
+    "image": "path_on_assets_folder_7",
+    "itemsOwned": [
+      {
+        "itemName": "painting",
+        "price": "200"
+      },
+      {
+        "itemName": "brush",
+        "price": "15"
+      }
+    ]
+  },
+  {
+    "name": "Frank",
+    "surname": "Harris",
+    "sex": "Male",
+    "image": "path_on_assets_folder_8",
+    "itemsOwned": [
+      {
+        "itemName": "phone",
+        "price": "600"
+      }
+    ]
+  },
+  {
+    "name": "Grace",
+    "surname": "Johnson",
+    "sex": "Female",
+    "image": "path_on_assets_folder_9",
+    "itemsOwned": [
+      {
+        "itemName": "dress",
+        "price": "150"
+      }
+    ]
+  },
+  {
+    "name": "Henry",
+    "surname": "Lee",
+    "sex": "Male",
+    "image": "path_on_assets_folder_10",
+    "itemsOwned": [
+      {
+        "itemName": "watch",
+        "price": "200"
+      },
+      {
+        "itemName": "wallet",
+        "price": "60"
+      }
+    ]
+  }
+]
+}

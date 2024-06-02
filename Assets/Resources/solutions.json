@@ -1,0 +1,24 @@
+{
+    "Solutions" : [
+        {
+            "puzzleId" : "puzzle_John",
+            "name" : "John",
+            "sex" : "Male"
+        },
+        {
+            "puzzleId" : "puzzle_Jane",
+            "name" : "Jane",
+            "sex" : "Female"
+        },
+        {
+            "puzzleId" : "puzzle_Alice",
+            "name" : "Alice",
+            "sex" : "Female"
+        },
+        {
+            "puzzleId" : "puzzle_Bob",
+            "name" : "Bob",
+            "sex" : "Male"
+        }
+    ]
+}
