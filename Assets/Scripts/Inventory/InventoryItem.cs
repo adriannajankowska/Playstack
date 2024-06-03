@@ -2,19 +2,32 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
+/// <summary>
+/// Handles the dragging functionality for inventory items, including displaying a tooltip.
+/// </summary>
 public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
+    // Reference to the RectTransform component of this UI element
     private RectTransform rectTransform;
+    // Reference to the Canvas component in the parent hierarchy
     private Canvas canvas;
+    // Reference to the CanvasGroup component to control the UI element's transparency and raycast blocking
     private CanvasGroup canvasGroup;
+    // Original parent of the draggable item to return to if dropped incorrectly
     public Transform OriginalParent { get; private set; }
 
-    private GameObject tooltip; // Reference to the tooltip GameObject
-    private Text tooltipText; // Reference to the Text component of the tooltip
+    // Tooltip GameObject and its Text component
+    private GameObject tooltip;
+    private Text tooltipText;
 
-    private CharacterInfo characterInfo; // Reference to the CharacterInfo component on the game object
-    private float tooltipOffset = 270f; // Offset to position the tooltip to the right of the draggable object
+    // Reference to the CharacterInfo component on the game object
+    private CharacterInfo characterInfo;
+    // Offset to position the tooltip to the right of the draggable object
+    private float tooltipOffset = 270f;
 
+    /// <summary>
+    /// Initializes references to required components.
+    /// </summary>
     private void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
@@ -42,15 +55,24 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         }
     }
 
+    /// <summary>
+    /// Called when the user begins dragging the UI element.
+    /// </summary>
+    /// <paramname="eventData">Event data for the drag.</param>
     public void OnBeginDrag(PointerEventData eventData)
     {
         if (canvasGroup != null)
         {
-            canvasGroup.alpha = 0.6f; // Make the UI element semi-transparent during drag
-            canvasGroup.blocksRaycasts = false; // Prevents the UI element from blocking raycasts while dragging
+            // Make the UI element semi-transparent during drag
+            canvasGroup.alpha = 0.6f;
+            // Prevents the UI element from blocking raycasts while dragging
+            canvasGroup.blocksRaycasts = false;
         }
+        // Store the original parent to return to if dropped incorrectly
         OriginalParent = transform.parent;
+        // Temporarily set the parent to the root to ensure it appears on top of other UI elements
         transform.SetParent(transform.root);
+        // Ensure the element is rendered last (on top)
         transform.SetAsLastSibling();
 
         if (tooltip != null)
@@ -58,34 +80,48 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
             UpdateTooltipText();
             // Show the tooltip text
             tooltipText.enabled = true;
+            // Position the tooltip correctly
             PositionTooltip();
         }
     }
 
+    /// <summary>
+    /// Called repeatedly while the user is dragging the UI element.
+    /// </summary>
+    /// <paramname="eventData">Event data for the drag.</param>
     public void OnDrag(PointerEventData eventData)
     {
         if (rectTransform != null && canvas != null)
         {
+            // Convert screen point to local point in the canvas
             Vector2 localPointerPosition;
             RectTransformUtility.ScreenPointToLocalPointInRectangle(
                 canvas.transform as RectTransform,
                 eventData.position,
                 eventData.pressEventCamera,
                 out localPointerPosition);
+            // Update the position of the UI element based on the drag delta
             rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
         }
         if (tooltip != null)
         {
+            // Position the tooltip correctly
             PositionTooltip();
         }
     }
 
+    /// <summary>
+    /// Called when the user ends dragging the UI element.
+    /// </summary>
+    /// <paramname="eventData">Event data for the drag.</param>
     public void OnEndDrag(PointerEventData eventData)
     {
         if (canvasGroup != null)
         {
-            canvasGroup.alpha = 1.0f; // Reset the UI element to fully opaque
-            canvasGroup.blocksRaycasts = true; // Allow the UI element to block raycasts again
+            // Reset the UI element to fully opaque
+            canvasGroup.alpha = 1.0f;
+            // Allow the UI element to block raycasts again
+            canvasGroup.blocksRaycasts = true;
         }
 
         // Snap back to original position if not dropped on a valid slot
@@ -102,6 +138,9 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         }
     }
 
+    /// <summary>
+    /// Updates the tooltip text with the currently dragged character's items and their prices.
+    /// </summary>
     private void UpdateTooltipText()
     {
         if (characterInfo != null && characterInfo.characterData != null)
@@ -120,9 +159,12 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         }
     }
 
+    /// <summary>
+    /// Positions the tooltip next to the draggable object.
+    /// </summary>
     private void PositionTooltip()
     {
-        // Copy the position of the draggable object
+        // Set the tooltip's position to be next to the draggable object
         tooltip.transform.position = transform.position;
     }
 }

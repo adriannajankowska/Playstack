@@ -2,14 +2,20 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+/// <summary>
+/// Class responsible for checking if all solution slots are correctly filled and displaying a completion message.
+/// </summary>
 public class SolutionChecker : MonoBehaviour
 {
     public string solutionInventoryTag = "SolutionInventory"; // Tag for the SolutionInventory GameObject
-    public TextMeshProUGUI completionMessage; // Reference to a TextMeshProUGUI component
-    public Image completionImage; // Reference to an Image component (optional)
+    public TextMeshProUGUI completionMessage; // Reference to a TextMeshProUGUI component for displaying completion message
+    public Image completionImage; // Reference to an Image component for displaying a completion image (optional)
 
-    private SolutionSlot[] solutionSlots;
+    private SolutionSlot[] solutionSlots; // Array of SolutionSlot components in the solution inventory
 
+    /// <summary>
+    /// Called when the script instance is being loaded.
+    /// </summary>
     private void Start()
     {
         // Find the SolutionInventory GameObject by tag
@@ -40,13 +46,17 @@ public class SolutionChecker : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Checks if all solution slots are filled and displays the completion indicators if they are.
+    /// </summary>
     public void CheckSolutions()
     {
+        // Iterate through each solution slot
         foreach (SolutionSlot slot in solutionSlots)
         {
+            // If any slot is not filled, hide the completion indicators and return
             if (!slot.IsFilled())
             {
-                // If any slot is not filled, hide the completion indicators and return
                 if (completionMessage != null)
                 {
                     completionMessage.gameObject.SetActive(false);
