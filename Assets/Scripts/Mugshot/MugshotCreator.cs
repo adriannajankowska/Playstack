@@ -68,14 +68,14 @@ public static class MugshotCreator
             textGameObject.transform.localScale = Vector3.one;
             TextMeshProUGUI textMeshPro = textGameObject.AddComponent<TextMeshProUGUI>();
             textMeshPro.text = characterData.name;
-            textMeshPro.fontSize = 30;
+            textMeshPro.fontSize = 60;
             textMeshPro.fontStyle = FontStyles.Bold;
             textMeshPro.alignment = TextAlignmentOptions.Center;
 
             // Set up RectTransform for the text
             RectTransform textRectTransform = textGameObject.GetComponent<RectTransform>();
-            textRectTransform.sizeDelta = new Vector2(150, 30);
-            textRectTransform.localPosition = new Vector3(0, -50, 0); // Position the text below the image
+            textRectTransform.sizeDelta = new Vector2(230, 30);
+            textRectTransform.localPosition = new Vector3(0, -80, 0); // Position the text below the image
         }
         else
         {

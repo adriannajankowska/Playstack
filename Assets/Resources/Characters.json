@@ -141,6 +141,18 @@
         {
           "itemName": "wallet",
           "price": "60"
+        },
+        {
+          "itemName": "apple",
+          "price": "7"
+        },
+        {
+          "itemName": "knife",
+          "price": "45"
+        },
+        {
+          "itemName": "laptop",
+          "price": "3500"
         }
       ]
     }
